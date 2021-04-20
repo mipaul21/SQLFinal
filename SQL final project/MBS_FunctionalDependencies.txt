@@ -1,0 +1,33 @@
+# FILE:	MBS_FunctionalDependencies.txt
+# Name: Mitchell Paul
+# DATE:	2019-11-29
+# DESCRIPTION:
+#	This is a functional dependency document related to Mitchells Bait Shop.
+
+
+# TABLE: Tackle 
+Tackle_id -> Bait_name, color, size, targeted_species 
+
+# TABLE: Equipment 
+Equipment_id -> Equipment_name, Brand, Rod_length, Reel_type
+
+# TABLE: Live_bait
+live_bait_id -> Date_stocked, expiring, restock_date
+
+
+# TABLE: Store_stock
+Tackle_id, Equipment_id --> Current_price, Number_in_stock, Last_date_stocked, Expected_restock date.
+
+# TABLE: Customers
+Customer_id -> First_name, Last_name, Data_contributions, Other_notes
+
+# TABLE: Bodies_of_water
+location_id
+
+# TABLE: Fish Tracking
+Catch_id -> [Location_id], [Customer Id], [Equipment_id], [Tackle_id], Species, Weight, Length, Date, Water_temp.
+
+
+#*******************************************************************************
+#                              END OF FILE
+#*******************************************************************************
